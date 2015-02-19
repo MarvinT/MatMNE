@@ -1,4 +1,4 @@
-function pfinal = MNEfit(stim, resp, teststim, testresp, order, Nd, fittype)
+function pfinal = MNEfit(stim, resp, teststim, testresp, order, fittype)
 % If you are fitting a MNE model with constraints beyond first and second
 % order correlations, you will have to change the following:
 
@@ -23,6 +23,6 @@ if order>1
 end
 
 % Run conjugate gradient algorithm
-pfinal = frprmn(pstart, @logloss, @dlogloss, stim, resp, teststim, testresp, order, avgs, Nd, fittype);
+pfinal = frprmn(pstart, @logloss, @dlogloss, stim, resp, teststim, testresp, order, avgs, fittype);
 
 

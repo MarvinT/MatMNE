@@ -1,4 +1,4 @@
-function [pbest, flist, ftestlist] = frprmn(p, func, dfunc, stim, resp, teststim, testresp, order, avgs, Nd, fittype)
+function [pbest, flist, ftestlist] = frprmn(p, func, dfunc, stim, resp, teststim, testresp, order, avgs, fittype)
 
 ITMAX = 1000;
 fp = feval(func, p, stim, resp, order);
